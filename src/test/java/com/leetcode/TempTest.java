@@ -9,7 +9,6 @@ public class TempTest {
     @Test
     @DisplayName("test temp for output")
     void test_output() {
-
         Assertions.assertEquals(1, new Temp().outPut(1));
     }
 }
