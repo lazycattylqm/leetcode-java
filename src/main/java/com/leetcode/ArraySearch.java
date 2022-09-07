@@ -49,7 +49,7 @@ public class ArraySearch {
         if (target == endArrValue) {
             return nums.length - 1;
         }
-        if (target==nums[0]) {
+        if (target == nums[0]) {
             return 0;
         }
         if (target == minValue) {

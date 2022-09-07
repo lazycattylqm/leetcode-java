@@ -44,7 +44,7 @@ public class ArraySearchTest {
     @DisplayName("33. 搜索旋转排序数组")
     void case_4() {
         ArraySearch arraySearch = new ArraySearch();
-        int[] nums = {1,3};
+        int[] nums = {1, 3};
         int i = arraySearch.search2(nums, 3);
         System.out.println(i);
     }

@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 
 public class PermuteUnique {
     private List<Boolean> visited;
+
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<Integer> initInput = Arrays.stream(nums)
                 .boxed()
@@ -41,7 +42,7 @@ public class PermuteUnique {
 
             visited.set(i, true);
             tempResult.add(curr.get(i));
-            backtrack(index + 1, curr,tempResult, result);
+            backtrack(index + 1, curr, tempResult, result);
             visited.set(i, false);
             tempResult.remove(index);
         }
