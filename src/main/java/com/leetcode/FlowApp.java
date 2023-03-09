@@ -6,7 +6,7 @@ import java.util.concurrent.SubmissionPublisher;
 
 public class FlowApp {
     public static void main(String[] args) throws InterruptedException {
-        SubmissionPublisher publisher = new SubmissionPublisher<Integer>(ForkJoinPool.commonPool(), 5);
+        SubmissionPublisher<Integer> publisher = new SubmissionPublisher<>(ForkJoinPool.commonPool(), 5);
         MySubscriber subscriber = new MySubscriber();
         publisher.subscribe(subscriber);
         for (int i = 0; i < 100; i++) {
