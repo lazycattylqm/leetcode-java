@@ -16,4 +16,20 @@ public class CheckString {
         return reduce.toString().equals("ab") || reduce.toString().equals("a");
 
     }
+
+    public boolean checkString2(String s) {
+        int res = 0;
+        String mark = "a";
+        for (String string : s.split("")) {
+            if (!string.equals(mark)) {
+                res++;
+                mark= string;
+            }
+            if (res>=2) {
+                return false;
+            }
+        }
+        return true;
+
+    }
 }
