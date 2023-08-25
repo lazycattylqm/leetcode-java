@@ -13,7 +13,7 @@ public class PathSum {
     }
 
     public void pathSumSub(TreeNode current, int targetSum, int tempSum, Stack<Integer> path,
-            List<List<Integer>> paths) {
+                           List<List<Integer>> paths) {
         if (current == null) {
 
 
