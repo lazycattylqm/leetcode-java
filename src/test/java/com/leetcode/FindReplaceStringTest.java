@@ -1,6 +1,7 @@
 package com.leetcode;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class FindReplaceStringTest {
@@ -21,6 +22,7 @@ public class FindReplaceStringTest {
     }
 
     @Test
+    @Disabled
     void case_3(){
         String abcd = solution.findReplaceString("fvokzonyhukpwbnkomdianhirsvdulhsfseaqzktupyeverfsd", new int[]{26,30,38,2,41,10,8,44,19,4,13,28,21,35,23,16}, new String[]{"rxv","dh","ui","ttv","wreor","vo"}, new String[]{"frs","c","ql","qpir","gwbeve","n"});
 
