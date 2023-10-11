@@ -4,14 +4,7 @@ import java.util.*;
 
 public class TopStudents {
 
-    private class Student {
-        int id;
-        int score;
-
-        public Student(int id, int score) {
-            this.id = id;
-            this.score = score;
-        }
+    private record Student(int id, int score) {
     }
 
     public List<Integer> topStudents(String[] positive_feedback, String[] negative_feedback, String[] report,
@@ -25,14 +18,14 @@ public class TopStudents {
             students.add(new Student(student_id[id], score));
         }
         students.sort((s1, s2) -> {
-            if (s1.score == s2.score) {
-                return s1.id - s2.id;
+            if (s1.score() == s2.score()) {
+                return s1.id() - s2.id();
             }
-            return s2.score - s1.score;
+            return s2.score() - s1.score();
         });
 
         return students.stream()
-                .map(v -> v.id)
+                .map(Student::id)
                 .limit(k)
                 .toList();
 
