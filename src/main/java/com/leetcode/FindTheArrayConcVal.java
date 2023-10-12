@@ -11,7 +11,7 @@ public class FindTheArrayConcVal {
             } else {
                 String concat = String.valueOf(nums[low])
                         .concat(String.valueOf(nums[high]));
-                Long l = Long.valueOf(concat);
+                long l = Long.parseLong(concat);
                 sum += l;
             }
             low++;
