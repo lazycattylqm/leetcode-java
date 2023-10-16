@@ -17,4 +17,18 @@ public class SingleNumber {
                 .mapToInt(v -> v)
                 .toArray();
     }
+
+    public int singleNumber2(int[] nums) {
+        return Arrays.stream(nums)
+                .boxed()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(v -> v.getValue() == 1)
+                .map(Map.Entry::getKey)
+                .mapToInt(v -> v)
+                .findFirst()
+                .getAsInt();
+
+    }
 }
