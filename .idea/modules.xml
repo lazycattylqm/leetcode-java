@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/leetcode-liqiming.main.iml" filepath="$PROJECT_DIR$/.idea/modules/leetcode-liqiming.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/leetcode-liqiming.test.iml" filepath="$PROJECT_DIR$/.idea/modules/leetcode-liqiming.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.liqiming.leetcode-liqiming.main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.liqiming.leetcode-liqiming.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.liqiming.leetcode-liqiming.test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.liqiming.leetcode-liqiming.test.iml" />
     </modules>
   </component>
 </project>
