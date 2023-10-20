@@ -12,8 +12,7 @@ public class GroupAnagrams {
                             .sorted()
                             .reduce("", (a, b) -> a + b);
                     if (acc.containsKey(key)) {
-                        acc.get(key)
-                                .add(v);
+                        acc.get(key).add(v);
                     } else {
                         acc.put(key, new ArrayList<>(List.of(v)));
                     }
