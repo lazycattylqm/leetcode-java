@@ -14,15 +14,10 @@ public class VowelStrings {
     }
 
     private boolean checkString(String word) {
-        if (word.length() == 1) {
-            return "aeiou".contains(word);
-        }
-        if (word.isEmpty()) {
-            return false;
-        }
-        Pattern pattern = Pattern.compile("^[aeiou](\\w)*[aeiou]$");
-        return pattern.matcher(word)
-                .find();
+      String start = word.substring(0, 1);
+      String end = word.substring(word.length() - 1);
+      return "aeiou".contains(start) && "aeiou".contains(end);
     }
+
 
 }
