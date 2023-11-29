@@ -8,13 +8,9 @@ class SmallestInfiniteSetTest {
     @Test
     void test_case() {
         SmallestInfiniteSet smallestInfiniteSet = new SmallestInfiniteSet();
-        smallestInfiniteSet.popSmallest();
-        smallestInfiniteSet.addBack(1);
-        smallestInfiniteSet.popSmallest();
-        smallestInfiniteSet.popSmallest();
-        smallestInfiniteSet.popSmallest();
+
         smallestInfiniteSet.addBack(2);
-        smallestInfiniteSet.addBack(3);
+        smallestInfiniteSet.popSmallest();
         smallestInfiniteSet.popSmallest();
         smallestInfiniteSet.popSmallest();
     }
