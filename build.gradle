@@ -4,6 +4,9 @@ plugins {
 
 group 'org.liqiming'
 version '1.0-SNAPSHOT'
+java {
+    sourceCompatibility = '21'
+}
 
 repositories {
     mavenLocal()
@@ -25,10 +28,10 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:5.4.0'
     testImplementation 'org.mockito:mockito-junit-jupiter:5.4.0'
 
-    compileOnly 'org.projectlombok:lombok:1.18.24'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
-    testCompileOnly 'org.projectlombok:lombok:1.18.24'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+    compileOnly 'org.projectlombok:lombok:latest.release'
+    annotationProcessor 'org.projectlombok:lombok:latest.release'
+    testCompileOnly 'org.projectlombok:lombok:latest.release'
+    testAnnotationProcessor 'org.projectlombok:lombok:latest.release'
 
     implementation "org.mapstruct:mapstruct:1.5.5.Final"
 
