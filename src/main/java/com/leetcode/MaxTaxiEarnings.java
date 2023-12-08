@@ -2,7 +2,6 @@ package com.leetcode;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class MaxTaxiEarnings {
     public long maxTaxiEarnings(int n, int[][] rides) {
@@ -13,17 +12,16 @@ public class MaxTaxiEarnings {
                 .collect(Collectors.groupingBy(a -> a[1]));
         for (int i = 1; i <= n; i++) {
             dp.add(dp.get(i - 1));
-            int finalI = i;
-            collect.getOrDefault(i, Collections.emptyList()).forEach(v->{
+            for (int[] v : collect.getOrDefault(i, Collections.emptyList())) {
                 int start = v[0];
                 int end = v[1];
                 int tip = v[2];
-                int money = end -start + tip;
+                int money = end - start + tip;
                 long lastMoney = dp.get(start);
-                long currentMoney = dp.get(finalI);
+                long currentMoney = dp.get(i);
                 long newMoney = lastMoney + money;
                 dp.set(end, Math.max(currentMoney, newMoney));
-            });
+            }
 
         }
         return dp.stream()
@@ -31,8 +29,6 @@ public class MaxTaxiEarnings {
                 .orElse(0L);
 
     }
-
-
 
 
 }
