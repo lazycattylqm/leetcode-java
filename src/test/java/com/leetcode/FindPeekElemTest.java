@@ -23,4 +23,20 @@ class FindPeekElemTest {
     int result = findPeekElem.findPeakElement(nums);
     assertTrue(result == 1 || result == 5);
   }
+
+  @Test
+  void testFindPeakElement_example3() {
+    FindPeekElem findPeekElem = new FindPeekElem();
+    int[] nums = {1, 2, 3, 1};
+    int result = findPeekElem.findPeakElement2(nums);
+    assertEquals(2, result);
+  }
+
+  @Test
+  void testFindPeakElement_example4() {
+    FindPeekElem findPeekElem = new FindPeekElem();
+    int[] nums = {1, 2, 1, 3, 5, 6, 4};
+    int result = findPeekElem.findPeakElement2(nums);
+    assertTrue(result == 1 || result == 5);
+  }
 }
