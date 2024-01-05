@@ -43,6 +43,12 @@ dependencies {
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     testImplementation 'ch.qos.logback:logback-classic:1.4.11'
 
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.0'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.0'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0'
+
+
 }
 
 test {
