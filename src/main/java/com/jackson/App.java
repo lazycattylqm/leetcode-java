@@ -28,10 +28,10 @@ public class App {
         Body body = new Body("content", "adds");
         Header header = new Header("name", "service", "content");
         Root root = new Root(header, body);
-        System.out.println(xmlMapper.writeValueAsString(root).replace("wstxns1:", "").replace(":wstxns1", "").replace("xmlns=\"\"", ""));
+        System.out.println(xmlMapper.writeValueAsString(root).replaceAll("wstxns[0-9]*:", "").replaceAll(":wstxns[0-9]*", "").replace("xmlns=\"\"", ""));
 
         String xml ="""
-                <?xml version='1.0' encoding='UTF-8'?><Root xmlns="https://lqm/name"><Lqm:lqm xmlns="https://lqm/name1" SvcId="service"><name >name</name><content >content</content></Lqm:lqm><body ><content><![CDATA[content]]></content><adds>adds</adds></body></Root>
+                <?xml version='1.0' encoding='UTF-8'?><Root xmlns="https://lqm/name"><Lqm:lqm xmlns="https://lqm/name1" SvcId="service"><name >name</name><content >content</content></Lqm:lqm><Lqm:body xmlns="https://lqm/name2"><content ><![CDATA[content]]></content><adds >adds</adds></Lqm:body></Root>
                 """;
 
 
