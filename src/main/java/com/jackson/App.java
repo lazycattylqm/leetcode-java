@@ -25,7 +25,7 @@ public class App {
 //        xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
         xmlMapper.enable(SerializationFeature.WRAP_ROOT_VALUE);
 //        xmlMapper.getFactory().getXMLOutputFactory().setProperty(ToXmlGenerator.Feature.WRITE_XML_DECLARATION.name(), true);
-        Body body = new Body("content", "adds");
+        Body body = new Body("aA", "aaB", "content", "adds");
         Header header = new Header("name", "service", "content");
         Root root = new Root(header, body);
         System.out.println(xmlMapper.writeValueAsString(root).replaceAll("wstxns[0-9]*:", "").replaceAll(":wstxns[0-9]*", "").replace("xmlns=\"\"", ""));
