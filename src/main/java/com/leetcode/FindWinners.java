@@ -16,7 +16,7 @@ public class FindWinners {
                     return m;
                 }, (a, b) -> a);
         Arrays.stream(matches).map(v->v[1]).forEach(v->{
-            map.put(v, map.get(v)+1);
+            map.put(v, map.getOrDefault(v, 0)+1);
         });
         List<Integer> winner = map.entrySet()
                 .stream()
